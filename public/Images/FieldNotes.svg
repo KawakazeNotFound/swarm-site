@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#e9eee8"/>
+  <g stroke="#ced8cc" fill="none"><path d="M0 160H1200M0 320H1200M0 480H1200M200 0V640M400 0V640M600 0V640M800 0V640M1000 0V640"/></g>
+  <rect x="95" y="95" width="1010" height="450" rx="6" fill="#f8faf6" stroke="#38543d" stroke-width="2"/>
+  <path d="M95 175H1105M740 175V545" stroke="#38543d"/>
+  <g fill="#38543d" font-family="monospace"><text x="130" y="143" font-size="22">SWARM JOURNAL</text><text x="900" y="143" font-size="18">FIELD / 001</text><text x="130" y="275" font-size="72">Build things.</text><text x="130" y="360" font-size="72">Keep notes.</text><text x="130" y="475" font-size="19">CONTENT → BLOCKS → MOTION</text></g>
+  <g fill="#cddfc9" stroke="#38543d" stroke-width="2"><rect x="810" y="245" width="210" height="70"/><rect x="810" y="355" width="210" height="70"/></g>
+  <g fill="#e97e48" stroke="white" stroke-width="4"><path d="M770 210L812 232L793 239L786 261Z"/><path d="M1005 414L1047 436L1028 443L1021 465Z"/></g>
+</svg>

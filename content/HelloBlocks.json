@@ -1,0 +1,36 @@
+{
+  "formatVersion": 1,
+  "id": "hello-blocks",
+  "slug": "hello-blocks",
+  "title": "让文字先被读到，再让光标登场。",
+  "excerpt": "一篇可以亲手修改的示例文章：区块负责排版，动画负责表达，两者各司其职。",
+  "tags": ["设计", "交互", "示例文章"],
+  "status": "published",
+  "createdAt": "2026-11-07T00:00:00+08:00",
+  "updatedAt": "2026-11-07T00:00:00+08:00",
+  "blocks": [
+    { "id": "opening", "type": "paragraph", "content": [{ "type": "text", "text": "你好，欢迎来到 Swarm Journal。", "styles": { "bold": true } }, { "type": "text", "text": "这不再是一张写死坐标的展示画布，而是一篇真正由区块组成的文章。你可以插入标题、图片、列表、引用、表格和代码，再为其中某个区块安排一段动画。", "styles": {} }] },
+    { "id": "cover", "type": "image", "props": { "url": "./Images/FieldNotes.svg", "caption": "FIELD NOTES / 记录正在发生的构建", "previewWidth": 900 } },
+    { "id": "reading-first", "type": "heading", "props": { "level": 2 }, "content": "01 / 阅读是主线，动画是注脚" },
+    { "id": "reading-copy", "type": "paragraph", "content": "文章的高度由内容决定。文字变长，后面的区块自然向下移动；窗口变窄，段落自然换行。光标跟随区块的真实位置，不再要求你手工填写每一个像素坐标。" },
+    { "id": "quote", "type": "quote", "content": "好的动效让人知道发生了什么，而不是让人等待内容出现。" },
+    { "id": "animation-heading", "type": "heading", "props": { "level": 2 }, "content": "02 / 把动画交给区块" },
+    { "id": "bullet-one", "type": "bulletListItem", "content": "自动模式：系统根据区块能力选择效果，空闲光标自动认领任务。" },
+    { "id": "bullet-two", "type": "bulletListItem", "content": "手动模式：选中区块，指定效果、时长、延迟、触发时机和前置区块。" },
+    { "id": "bullet-three", "type": "bulletListItem", "content": "自定义模式：填写关键帧 JSON，而不是向文章里插入 JavaScript。" },
+    { "id": "motion-table", "type": "table", "content": { "type": "tableContent", "rows": [{ "cells": ["区块", "自动动画", "可选效果"] }, { "cells": ["标题 / 段落", "文字揭示", "淡入、上浮、缩放、自定义"] }, { "cells": ["图片 / 表格", "光标搭建", "淡入、上浮、缩放、自定义"] }] } },
+    { "id": "code-heading", "type": "heading", "props": { "level": 2 }, "content": "03 / 留下可继续扩展的接口" },
+    { "id": "motion-code", "type": "codeBlock", "props": { "language": "json" }, "content": "{\n  \"preset\": \"cursor-build\",\n  \"trigger\": \"enter\",\n  \"duration\": 850,\n  \"after\": \"reading-first\"\n}" },
+    { "id": "closing", "type": "paragraph", "content": "这篇是随项目提供的可编辑示例。打开本地工作台，修改一段文字，给它换一个动画，再保存并预览。内容会写入项目的 content 目录，而不是只留在当前浏览器里。" }
+  ],
+  "motion": {
+    "enabled": true,
+    "workers": 3,
+    "defaults": { "preset": "auto", "duration": 650, "delay": 0, "trigger": "enter", "after": "" },
+    "blocks": {
+      "cover": { "preset": "cursor-build", "duration": 1100 },
+      "quote": { "preset": "custom", "duration": 850, "keyframes": [{ "opacity": 0, "transform": "translateX(-24px) rotate(-1deg)" }, { "opacity": 1, "transform": "translateX(0) rotate(0deg)" }] },
+      "motion-table": { "preset": "rise", "duration": 750 }
+    }
+  }
+}

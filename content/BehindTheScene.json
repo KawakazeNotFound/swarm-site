@@ -1,0 +1,21 @@
+{
+  "formatVersion": 1,
+  "id": "behind-the-scene",
+  "slug": "behind-the-scene",
+  "title": "从一张画布，到一个可以生长的博客。",
+  "excerpt": "保留多光标的趣味，放开固定坐标的边界。关于内容、布局与动画之间的一次拆分。",
+  "tags": ["工程", "构建笔记", "示例文章"],
+  "status": "published",
+  "createdAt": "2026-11-06T00:00:00+08:00",
+  "updatedAt": "2026-11-07T00:00:00+08:00",
+  "blocks": [
+    { "id": "scene-intro", "type": "paragraph", "content": "最初的 Swarm 页面像一个会自己完成的设计稿：光标拉出参考线，拖动矩形，再逐字写下文案。它很有表现力，但文章并不适合一直生活在固定坐标里。" },
+    { "id": "scene-heading", "type": "heading", "props": { "level": 2 }, "content": "让不同的事情回到各自的位置" },
+    { "id": "scene-content", "type": "numberedListItem", "content": "内容：保存在项目的 JSON 文档里，区块 ID 跟随区块，而不是跟随它在第几行。" },
+    { "id": "scene-layout", "type": "numberedListItem", "content": "排版：交给浏览器和成熟区块编辑器，处理换行、嵌套列表、图片、表格与富文本。" },
+    { "id": "scene-animation", "type": "numberedListItem", "content": "动画：通过注册表选择效果，调度器只认识任务和依赖，不认识某篇文章的具体标题。" },
+    { "id": "scene-note", "type": "quote", "content": "同一份内容可以没有动画，也可以切换表现方式；文章本身始终完整。" },
+    { "id": "scene-end", "type": "paragraph", "content": "原始的多光标画布仍保留在“原始演示”中。这里则是新的起点：先写好一篇文章，再决定哪些地方值得被强调。" }
+  ],
+  "motion": { "enabled": true, "workers": 2, "defaults": { "preset": "auto", "duration": 700, "delay": 0, "trigger": "enter", "after": "" }, "blocks": {} }
+}
